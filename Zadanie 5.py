@@ -8,3 +8,4 @@ print("round(5.497) =", round(5.497), "\n")
 
 print("(math.floor(5.999) =", math.floor(5.999))
 print("Największa Liczba całkowita nie większa niż podany argument")
+
