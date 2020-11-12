@@ -1,4 +1,4 @@
-import re
+import er
 password = input("Type password: ")
 l = re.findall("[a-zA-Z]", password)
 n = re.findall("[0-9]", password)
