@@ -1,12 +1,9 @@
-def nwd(a, b):
-    while(a!=b):
-        if(a>b):
-            a -= b
-        else:
-            b -= a
+def NWD(a, b):
+    while a != b:
+        a, b = max(a, b), min(a, b)
+        a = a - b
     return a
-print("Podaj 1 liczbe calkowita")
-x = int(input())
-print("Podaj 2 liczbe calkowita")
-y = int(input())
-print(nwd(x,y))
+
+a = int(input("Podaj pierwszą liczbę: "))
+b = int(input("Podaj drugą liczbę: "))
+print(NWD(a, b))

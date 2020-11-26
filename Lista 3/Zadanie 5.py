@@ -1,25 +1,29 @@
-import er
+import re
 password = input("Type password: ")
-l = re.findall("[a-zA-Z]", password)
-n = re.findall("[0-9]", password)
-s = re.findall("[$#@]", password)
-lt = len(password)
-if l:
+atLeastOneLetter = re.findall("[a-zA-Z]", password)
+# Jeżeli zostanie odnaleziona mala lub duza litera alfabetu zostanie zwrocona wartosc true
+atLeastOneUnit = re.findall("[0-9]", password)
+# Jeżeli zostanie odnaleziona mala lub duza litera alfabetu zostanie zwrocona wartosc true
+atLeastOneChar = re.findall("[$#@]", password)
+# Jeżeli zostanie odnaleziona mala lub duza litera alfabetu zostanie zwrocona wartosc true
+lengthOfPassword = len(password)  # długość wprowadzonego hasła. Przyda się do sprawdzenia warunku wymaganej długości
+if atLeastOneLetter:  # jeżel prawda ma zostać wykonana instrukcja
     print("Spełnia warunek")
-else:
+else:  # W przeciwnym wypadku
     print("Nie zawiera co najmniej 1 litery alfabetu [a − z] oraz [A − Z].")
 
-if n:
+if atLeastOneUnit:
     print("Spełnia warunek")
 else:
-    print("Nie zawiera co najmniej 1 liczby z przedziaªu [0 − 9].")
+    print("Nie zawiera co najmniej 1 liczby z przedziału [0 − 9].")
 
-if s:
+if atLeastOneChar:
     print("Spełnia warunek")
 else:
     print("Nie zawiera co najmniej 1 znaku specjalnego ze zbioru [$#@].")
 
-if lt >= 6 and lt <=16:
+if 6 <= lengthOfPassword <= 16:
     print("Spełnia warunek")
 else:
     print("Dlugość hasła jest mniejsza niz 6 badz wieksza niz 16.")
+
