@@ -3,7 +3,7 @@ dig = {
     8: "osiem", 9: "dziewięć"
 }
 
-F = {
+numbers = {
     0: "", 11: "jedenaście", 12: "dwanaście", 13: "trzynaście", 14: "czternaście", 15: "piętnaście",
     16: "szesnaście", 17: "siedemnaście", 18: "osiemnaście", 19: "dziewiętnaście", 10: "dziesięć",
     20: "dwadzieścia", 30: "trzydzieści", 40: "czterdzieści", 50: "pięćdziesiąt", 60: "sześćdziesiąt",
@@ -19,62 +19,67 @@ thousand = {
     1000: "tysiąc"
 }
 
+# Funkcja number_to_word pobiera arguemnt number jako łańcuch. Następnie w zależności od długości podanej liczby
+# obliczane są dla odpowiednich jednostek reszty z dzielenia. Na podstawie reszty z dzielenia definiowana jest wartosc
+# klucza zapisana w słowniku. Jezeli ostatnie dwie liczby są z przedziału <11-19> to z uwagi na skladnie jezyka polskiego
+# obliczana jest tylko jedna liczba.
 
-def numberToWord(number):
 
-    word1 = ""
-    word2 = ""
-    word3 = ""
-    word4 = ""
+def number_to_word(number):
+
+    unit_of_number = ""
+    ten_of_number = ""
+    hundred_of_number = ""
+    thousand_of_number = ""
     length = len(number)
 
     if length == 4:
         number = int(number)
         if 10 < number % 100 < 20:
-            second = number % 100
-            word2 = F.get(second)
-            third = number % 1000 - second
-            word3 = hundreds.get(third)
-            fourth = number % 10000 - second - third
-            word4 = thousand.get(fourth)
+            second_dig = number % 100
+            ten_of_number = numbers.get(second_dig)
+            third_dig = number % 1000 - second_dig
+            hundred_of_number = hundreds.get(third_dig)
+            fourth_dig = number % 10000 - second_dig - third_dig
+            thousand_of_number = thousand.get(fourth_dig)
         else:
-            first = number % 10
-            word1 = dig.get(first)
-            second = number % 100 - first
-            word2 = F.get(second)
-            third = number % 1000 - first - second
-            word3 = hundreds.get(third)
-            fourth = number % 10000 - first - second - third
-            word4 = thousand.get(fourth)
+            first_dig = number % 10
+            unit_of_number = dig.get(first_dig)
+            second_dig = number % 100 - first_dig
+            ten_of_number = numbers.get(second_dig)
+            third_dig = number % 1000 - first_dig - second_dig
+            hundred_of_number = hundreds.get(third_dig)
+            fourth_dig = number % 10000 - first_dig - second_dig - third_dig
+            thousand_of_number = thousand.get(fourth_dig)
     elif length == 3:
         number = int(number)
         if 10 < number % 100 < 20:
-            second = number % 100
-            word2 = F.get(second)
-            third = number % 1000 - second
-            word3 = hundreds.get(third)
+            second_dig = number % 100
+            ten_of_number = numbers.get(second_dig)
+            third_dig = number % 1000 - second_dig
+            hundred_of_number = hundreds.get(third_dig)
         else:
-            first = number % 10
-            word1 = dig.get(first)
-            second = number % 100 - first
-            word2 = F.get(second)
-            third = number % 1000 - first - second
-            word3 = hundreds.get(third)
+            first_dig = number % 10
+            unit_of_number = dig.get(first_dig)
+            second_dig = number % 100 - first_dig
+            ten_of_number = numbers.get(second_dig)
+            third_dig = number % 1000 - first_dig - second_dig
+            hundred_of_number = hundreds.get(third_dig)
     elif length == 2:
         number = int(number)
         if number < 20:
-            word2 = F.get(number)
+            ten_of_number = numbers.get(number)
         else:
-            first = number %10
-            word1 = dig.get(first)
-            second = number % 100 - first
-            word2 = F.get(second)
+            first_dig = number % 10
+            unit_of_number = dig.get(first_dig)
+            second_dig = number % 100 - first_dig
+            ten_of_number = numbers.get(second_dig)
     elif length == 1:
         number = int(number)
-        first = number % 10
-        word1 = dig.get(first)
-    print(word4, word3, word2, word1)
+        first_dig = number % 10
+        unit_of_number = dig.get(first_dig)
+    print(thousand_of_number, hundred_of_number, ten_of_number, unit_of_number)
 
 
 x = input("Podaj liczbe:")
-numberToWord(x)
+number_to_word(x)
