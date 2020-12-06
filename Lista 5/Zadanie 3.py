@@ -36,4 +36,10 @@ def rom2dec(value):
     return result
 
 
-print(rom2dec("IM"))
+print(rom2dec("III"))
+print(rom2dec("IV"))
+print(rom2dec("XXIII"))
+print(rom2dec("LXIX"))
+print(rom2dec("CCXVIII"))
+print(rom2dec("DXI"))
+print(rom2dec("MCMXCIX"))

@@ -1,17 +1,8 @@
-KLUCZ = 3
+import SzyfrCezara
 
 
-def szyfruj(txt):
-    zaszyfrowny = ""
-    txt = txt.lower()
-    print(txt)
-    for i in range(len(txt)):
-        if ord(txt[i]) > 122 - KLUCZ:
-            zaszyfrowny += chr(ord(txt[i]) + KLUCZ - 26)
-        else:
-            zaszyfrowny += chr(ord(txt[i]) + KLUCZ)
-    return zaszyfrowny
+encrypted = input("Podaj tekst do zaszyfowania")
+decrypted = input("Podaj tekst zaszyfrowany")
 
-
-tekst = input("Podaj ciąg do zaszyfrowania:\n")
-print("Ciąg zaszyfrowany:\n", szyfruj(tekst))
+SzyfrCezara.encrypt(encrypted)
+SzyfrCezara.decrypt(decrypted)
