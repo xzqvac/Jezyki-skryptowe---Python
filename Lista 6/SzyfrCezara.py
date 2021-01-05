@@ -1,15 +1,12 @@
 """Program sluzy do zaszyfrowania oraz odszyfrowania podanego tekstu. Oparty na szyfrze Cezara"""
 
 
-#print("Jestem", __name__)
-
-  # klucz szyfrujący i deszyfrujący
-
 def calcualte_key():
     key = int(input("Podaj klucz szyfrujący/deszyfrujący"))
     if key > 26:
         key = key % 26
     return key
+
 
 def encrypt(txt):
     """"Szyfrowanie"""

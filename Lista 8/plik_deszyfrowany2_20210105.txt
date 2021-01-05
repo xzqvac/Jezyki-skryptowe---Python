@@ -1,0 +1,9 @@
+python f{ jzyk programowania wysokiego poziomu oglnego przeznaczenia, o rozbudowanym
+pakiecie bibliotek standardowych, ktrego idek przewodnik jest czytelnom i klarownom kodu
+rdhowego. jego skhadnia cechuje si przejrzystocik i zwizhocik.
+python wspiera rne paradygmaty programowania: obiektowy, imperatywny oraz w mniejszym
+stopniu funkcyjny. posiada w pehni dynamiczny system typw i automatyczne zarzkdzanie
+pamicik, bdkc w tym podobnym do jzykw perl, ruby, scheme czy tcl. podobnie jak inne
+jzyki dynamiczne jest czsto uywany jako jzyk skryptowy. interpretery pythona sk
+dostpne na wiele systemw operacyjnych.
+rdho - wikipedia

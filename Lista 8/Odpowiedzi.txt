@@ -1,0 +1,21 @@
+
+nr PESEL: 45850152219
+Data urodzenia 1845-5-01;	Plec: Mê¿czyzna
+nr PESEL: 86712264178
+Data urodzenia 2286-11-22;	Plec: Mê¿czyzna
+nr PESEL: 97311752845
+Data urodzenia 2097-11-17;	Plec: Kobieta
+nr PESEL: 13903147932
+Data urodzenia 1813-10-31;	Plec: Mê¿czyzna
+nr PESEL: 76680583638
+Data urodzenia 2276-8-05;	Plec: Mê¿czyzna
+nr PESEL: 50431017177
+Data urodzenia 2150-3-10;	Plec: Mê¿czyzna
+nr PESEL: 60270608755
+Data urodzenia 2060-7-06;	Plec: Mê¿czyzna
+nr PESEL: 10110398887
+Data urodzenia 1910-11-03;	Plec: Kobieta
+nr PESEL: 86232881842
+Data urodzenia 2086-3-28;	Plec: Kobieta
+nr PESEL: 05921424155
+Data urodzenia 1805-12-14;	Plec: Mê¿czyzna
