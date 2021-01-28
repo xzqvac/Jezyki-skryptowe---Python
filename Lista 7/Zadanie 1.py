@@ -13,7 +13,8 @@ def fibrek(liczba):
 def fibitr(liczba, czasit):
     a = 0
     b = 1
-    for j in range(0, liczba + 1, 1):
+    print(a, end=", ")
+    for j in range(0, liczba , 1):
         print(b, end=", ")
         b = b + a
         a = b - a
@@ -22,7 +23,7 @@ def fibitr(liczba, czasit):
 
 N = int(input("Podaj N"))
 czas = 0
-for i in range(0, N + 1, 1):
+for i in range(0, N+1 , 1):
     print(fibrek(i), end=", ")
     czas += time.process_time()
 print(" Czas operacji:", czas)
